@@ -16,6 +16,8 @@ defmodule StarTrackerWeb.Router do
   scope "/", StarTrackerWeb do
     pipe_through :browser
 
+    resources "/materials", MaterialController
+
     get "/", PageController, :index
     get "/info", PageController, :info
     get "/info/:name", PageController, :info

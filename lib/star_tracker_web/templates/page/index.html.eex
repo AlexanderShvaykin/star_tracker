@@ -1,5 +1,9 @@
 <div class="phx-hero">
   <h2>Star Tracker</h2>
   <p class="lead">Track and trade resources related to star formation.</p>
-  <a href="/info">Info</a>
+  <ul>
+  <%= for name <- ["José", "Chris", "Jeffrey"] do %>
+    <li><%= link name, to: "/info/#{name}" %></li>
+  <% end %>
+</ul>
 </div>

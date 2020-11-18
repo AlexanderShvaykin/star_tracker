@@ -5,7 +5,8 @@ defmodule StarTrackerWeb.PageController do
     render(conn, "index.html")
   end
 
-  def info(conn, _params) do
-    render(conn, "info.html")
+  def info(conn, params) do
+    name = params["name"] || "INFO v2"
+    render(conn, "info.html", header: name)
   end
 end

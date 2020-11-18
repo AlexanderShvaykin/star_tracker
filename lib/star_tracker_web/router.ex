@@ -18,6 +18,7 @@ defmodule StarTrackerWeb.Router do
 
     get "/", PageController, :index
     get "/info", PageController, :info
+    get "/info/:name", PageController, :info
   end
 
   # Other scopes may use custom stacks.

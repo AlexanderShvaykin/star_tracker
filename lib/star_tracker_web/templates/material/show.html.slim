@@ -1,0 +1,15 @@
+h1 Show Material
+ul
+  li
+    strong Name: 
+    span = " #{@material.name}"
+  li
+    strong Amount:
+    span = " #{@material.amount}"
+  li
+    strong Price:
+    span = " #{@material.price}"
+
+span = link "Edit", to: Routes.material_path(@conn, :edit, @material)
+span |
+span = link "Back", to: Routes.material_path(@conn, :index)

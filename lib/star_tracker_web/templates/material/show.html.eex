@@ -12,6 +12,11 @@
     <%= @material.amount %>
   </li>
 
+  <li>
+    <strong>Price:</strong>
+    <%= @material.price %>
+  </li>
+
 </ul>
 
 <span><%= link "Edit", to: Routes.material_path(@conn, :edit, @material) %></span>

@@ -13,6 +13,10 @@
   <%= number_input f, :amount %>
   <%= error_tag f, :amount %>
 
+  <%= label f, :price %>
+  <%= number_input f, :price %>
+  <%= error_tag f, :price %>
+
   <div>
     <%= submit "Save" %>
   </div>

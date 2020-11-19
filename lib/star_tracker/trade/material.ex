@@ -5,6 +5,7 @@ defmodule StarTracker.Trade.Material do
   schema "materials" do
     field :amount, :integer
     field :name, :string
+    field :price, :integer
 
     timestamps()
   end
@@ -12,7 +13,7 @@ defmodule StarTracker.Trade.Material do
   @doc false
   def changeset(material, attrs) do
     material
-    |> cast(attrs, [:name, :amount])
-    |> validate_required([:name, :amount])
+    |> cast(attrs, [:name, :amount, :price])
+    |> validate_required([:name, :amount, :price])
   end
 end
